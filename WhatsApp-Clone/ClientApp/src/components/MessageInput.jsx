@@ -18,10 +18,11 @@ const MessageInput = (props) => {
   return (
     <div class="input-group">
       <form onSubmit={onSubmit}>
-        <div className="row">
-          <div className="col-11">
+
+
+
             <input
-              className="form-control"
+              className="form-control d-inline"
               type="text"
               id="message"
               placeholder="Enter message"
@@ -31,14 +32,9 @@ const MessageInput = (props) => {
               onChange={onMessageUpdate}
               style={{ width: "450px" }}
             />
-          </div>
-
-          <div className="col-1">
-            <button class="btn btn-outline-secondary" id="button-send">
+            <button class="btn btn-secondary float-right ml-3" id="button-send">
               Send
             </button>
-          </div>
-        </div>
 
         <br></br>
       </form>

@@ -7,9 +7,9 @@ import authService from './api-authorization/AuthorizeService';
 
 const Chat = () => {
     const [connection, setConnection] = useState(null);
-    // [name, roomId]
+    // [name,[rooms]]
     const [users, setUsers] = useState([]);
-    // name, roomId
+    // name, [rooms]
     const [targetUser, setTargetUser] = useState(null);
     // [content, sender, roomId]
     const [ messages, setMessages ] = useState([]);
@@ -17,7 +17,7 @@ const Chat = () => {
     const loadUsers = (users) => {
         setUsers(users);
     }
-
+    
     const loadChat = (chat) => {
         setMessages(chat)
     }
