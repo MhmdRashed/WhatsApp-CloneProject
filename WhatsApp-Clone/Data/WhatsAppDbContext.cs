@@ -22,6 +22,7 @@ namespace WhatsApp_Clone.Data
         public DbSet<RoomModel> Rooms { get; set; }
         public DbSet<MessageModel> Messages { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+         public DbSet<RoomUserModel> RoomUsers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -12,5 +12,7 @@ namespace WhatsApp_Clone.Models
         public ApplicationUser Admin { get; set; }
 
         public IEnumerable<MessageModel> Messages { get; set; }
+        public IEnumerable<RoomUserModel> RoomUser { get; set; }
+
     }
 }
