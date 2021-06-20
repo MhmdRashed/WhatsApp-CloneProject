@@ -11,7 +11,8 @@ namespace WhatsApp_Clone.Models
         public string  Name { get; set; }
         public string Password { get; set; }
 
-        public IEnumerable<MessageModel> Messages { get; set; }
+        public ICollection<MessageModel> Messages { get; set; }
+
 
     }
     

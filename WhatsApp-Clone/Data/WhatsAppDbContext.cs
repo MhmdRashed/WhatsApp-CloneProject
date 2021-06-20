@@ -25,7 +25,17 @@ namespace WhatsApp_Clone.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+          /*  modelBuilder.Entity<MessageModel>()
+				.HasOne<ApplicationUser>(m => m.Sender)
+				.WithMany(user => user.Messages)
+				.HasForeignKey(m => m.SenderId);
+
+			modelBuilder.Entity<MessageModel>()
+				.HasOne<ApplicationUser>(m => m.Recevier)
+				.WithMany(user => user.Messages)
+				.HasForeignKey(m => m.RecevierId);*/
+
+			base.OnModelCreating(modelBuilder);
         }
         
     }
