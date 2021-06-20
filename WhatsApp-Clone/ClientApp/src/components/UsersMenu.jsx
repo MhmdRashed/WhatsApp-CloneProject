@@ -14,7 +14,7 @@ export default function UsersMenu(props) {
                     name: 'mhmd'
                 },
                 {
-                    name: 'rashed'
+                    name: 'test'
                 },
                 {
                     name: 'tuwaiq'
@@ -26,7 +26,7 @@ export default function UsersMenu(props) {
 
     return (
         <div>
-            <h4> All Users </h4>
+            <h4> Available Users </h4>
 
             <User allUsers={allUsers} />
         </div>

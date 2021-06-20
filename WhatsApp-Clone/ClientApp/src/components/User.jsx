@@ -6,7 +6,7 @@ export default function User(props) {
 
     const displayUsers = props.allUsers.map((user, i) => {
         return(
-            <a href="#" class="list-group-item list-group-item-action" key={i}>{user.name}</a>
+            <input type="button" href="#" class="list-group-item list-group-item-action" value={user.name} key={i} />
         )
     })
 
