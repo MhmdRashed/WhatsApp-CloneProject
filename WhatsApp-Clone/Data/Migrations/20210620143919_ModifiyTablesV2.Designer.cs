@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WhatsApp_Clone.Data;
 
 namespace WhatsApp_Clone.Data.Migrations
 {
     [DbContext(typeof(WhatsAppDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210620143919_ModifiyTablesV2")]
+    partial class ModifiyTablesV2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -366,17 +368,23 @@ namespace WhatsApp_Clone.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("User1Id")
+                    b.Property<int>("User1Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("User1Id1")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("User2Id")
+                    b.Property<int>("User2Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("User2Id1")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("User1Id");
+                    b.HasIndex("User1Id1");
 
-                    b.HasIndex("User2Id");
+                    b.HasIndex("User2Id1");
 
                     b.ToTable("Rooms");
                 });
@@ -453,11 +461,11 @@ namespace WhatsApp_Clone.Data.Migrations
                 {
                     b.HasOne("WhatsApp_Clone.Models.ApplicationUser", "User1")
                         .WithMany()
-                        .HasForeignKey("User1Id");
+                        .HasForeignKey("User1Id1");
 
                     b.HasOne("WhatsApp_Clone.Models.ApplicationUser", "User2")
                         .WithMany()
-                        .HasForeignKey("User2Id");
+                        .HasForeignKey("User2Id1");
 
                     b.Navigation("User1");
 
