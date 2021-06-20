@@ -11,7 +11,7 @@ namespace WhatsApp_Clone.Models
         public int Id { get; set; }
         public string Content { set; get; }
 
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         
         public ApplicationUser User { get; set; }
         public int RoomId { get; set; }
